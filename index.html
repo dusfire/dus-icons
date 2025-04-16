@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dus Icons</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 2rem;
+      }
+      .icon-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 20px;
+      }
+      .icon-box {
+        text-align: center;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .icon-box i {
+        font-size: 24px;
+        margin-bottom: 5px;
+        display: block;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dus Icons Library</h1>
+    <input type="text" id="search" placeholder="Search icons..." />
+    <div class="icon-grid" id="iconGrid">
+      <div class="icon-box">
+        <i class="dus-home"></i>
+        <div>dus-home</div>
+      </div>
+      <div class="icon-box">
+        <i class="dus-user"></i>
+        <div>dus-user</div>
+      </div>
+      <!-- More icons go here -->
+    </div>
+
+    <script>
+      const searchInput = document.getElementById("search");
+      const iconGrid = document.getElementById("iconGrid");
+      searchInput.addEventListener("input", () => {
+        const query = searchInput.value.toLowerCase();
+        const boxes = iconGrid.querySelectorAll(".icon-box");
+        boxes.forEach((box) => {
+          const text = box.innerText.toLowerCase();
+          box.style.display = text.includes(query) ? "" : "none";
+        });
+      });
+    </script>
+  </body>
+</html>

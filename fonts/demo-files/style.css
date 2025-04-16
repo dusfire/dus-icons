@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'dus-icons';
+  src:  url('fonts/dus-icons.eot?m7gm0k');
+  src:  url('fonts/dus-icons.eot?m7gm0k#iefix') format('embedded-opentype'),
+    url('fonts/dus-icons.ttf?m7gm0k') format('truetype'),
+    url('fonts/dus-icons.woff?m7gm0k') format('woff'),
+    url('fonts/dus-icons.svg?m7gm0k#dus-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="dus-"], [class*=" dus-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'dus-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dus-home:before {
+  content: "\e900";
+}
+.dus-music:before {
+  content: "\e911";
+}
+.dus-play:before {
+  content: "\e912";
+}
