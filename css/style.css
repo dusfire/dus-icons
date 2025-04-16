@@ -28,4 +28,11 @@
   content: "\e901";
 }
 
+.dus-music:before {
+  content: "\e911";
+}
+.dus-play:before {
+  content: "\e912";
+}
+
 /* Add more icons here */
